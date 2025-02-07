@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календар</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .calendar {
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .time {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .date {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calendar">
+        <div class="time" id="time"></div>
+        <div class="date" id="date"></div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const timeString = now.toLocaleTimeString('uk-UA');
+            const dateString = now.toLocaleDateString('uk-UA', options);
+
+            document.getElementById('time').innerText = timeString;
+            document.getElementById('date').innerText = dateString;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime(); // Initial call to display immediately
+    </script>
+
+</body>
+</html>
