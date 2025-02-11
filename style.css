@@ -1,0 +1,157 @@
+/*<link rel="stylesheet" type="text/css" href="style.css">*/
+body{
+	font-family: corbel;
+	font-size: 100%;
+	background-color: #D2BBA0;
+    line-height: 22px;
+	text-align: justify;
+}
+header{
+	padding: 20px;
+	background-color: #B5B4BF;
+	/*B5B4BF*/
+	/*593A2E гарний коричневий*/
+}
+h1,h2{
+	font-family: San-Serif;
+	color: black;
+	text-align: center;
+	
+}
+p{
+	font-size:100%;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	text-align: justify;
+	color: black !important;
+	line-height: 21px;
+}
+#Start1{
+	font-family: georgia, Serif;
+	font-size: 6;
+	color: black;
+}
+.container{
+	color: #C0C0C0;
+	list-style-type: disc;
+	background-color: #E6E6FA;
+	min-height: 64px;
+}
+
+table#unusual-hotels{
+	border: black solid 2px;
+	border-collapse: collapse;
+	font-family:corbel; 
+	font-size: 100%;
+	color: black;
+	line-height: 23px;
+}
+table#unusual-hotels TH{
+	border: black solid 1px;
+}
+table#unusual-hotels TD{
+	border: black solid 1px;
+	padding: 10px;
+}
+/*align='center' border="1" cellpadding="8" cellspacing="0"*/
+table#Europetable{
+	border: black solid 1px;
+	/*align: center; don't work*/
+	border-spacing: 5px;
+	/*cellspacing: 5;
+	cellpadding: 10;*/
+	background-color: grey;
+	width:90% ;
+	font-family:corbel; 
+	font-size: 100%;
+	color: black;
+	line-height: 22px;
+	text-align: left;
+	font-weight: normal;  
+}  
+table#Europetable TH{
+	border: black solid 1px;
+	padding: 10px;
+	text-align:center;
+	font-weight: bold; 
+}
+table#Europetable TD{
+	border: black solid 1px;
+	padding: 10px;	
+}
+/*border="1" cellspacing="5" cellpadding="10" bgcolor="grey" bordercolor="black" width="90%" align="center"*/
+table#Americatable{
+	border: black solid 1px;
+	border-spacing: 5px;
+	background-color: grey;
+	width:90% ;
+	font-family:corbel; 
+	font-size: 100%;
+	color: black;
+	line-height: 22px;
+	text-align: left;
+	font-weight: normal;  
+}  
+table#Americatable TH{
+	border: black solid 1px;
+	padding: 10px;
+	font-weight: bold; 
+}
+table#Americatable TD{
+	border: black solid 1px;
+	padding: 10px;	
+}
+table#Asiatable{
+	border: black solid 1px;
+	border-spacing: 5px;
+	background-color: grey;
+	width:90% ;
+	font-family:corbel; 
+	font-size: 100%;
+	color: black;
+	line-height: 22px;
+	text-align: left;
+	font-weight: normal;  
+}  
+table#Asiatable TH{
+	border: black solid 1px;
+	padding: 10px;
+	font-weight: bold; 
+}
+table#Asiatable TD{
+	border: black solid 1px;
+	padding: 10px;	
+}
+.links{
+	text-decoration: none;
+	color: #655247; 
+	font-weight: bold;
+}
+.site_links{
+	text-decoration: none;
+	color: #655247; 
+	font-weight: bold;
+	font-style: italic;
+}
+dl dt{
+	font-size: 16px;
+	font-weight: bold;
+	font-style: italic;
+	color: black;
+}
+dd{
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	color: black;
+}
+ul{
+	list-style-type: disc;
+}
+ul.hotel-list li{
+	background: #ffe5c3;	
+}
+ol{
+	list-style-type: decimal;
+	color: black;
+}
