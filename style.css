@@ -7,16 +7,28 @@ body{
 	text-align: justify;
 }
 header{
-	padding: 20px;
+	padding: 10px;
 	background-color: #B5B4BF;
 	/*B5B4BF*/
 	/*593A2E гарний коричневий*/
+	/*#759CBF гарний blue*/
+}
+header img{
+	width: 50%;
+	height:50%;
+	position:relative;
+	left: 25%;
+}
+.Left_img{
+	width: 37%;
+	height:37%;
+	position:relative;
+	right: 5%;
 }
 h1,h2{
 	font-family: San-Serif;
 	color: black;
-	text-align: center;
-	
+	text-align: center;	
 }
 p{
 	font-size:100%;
@@ -37,7 +49,6 @@ p{
 	background-color: #E6E6FA;
 	min-height: 64px;
 }
-
 table#unusual-hotels{
 	border: black solid 2px;
 	border-collapse: collapse;
@@ -48,6 +59,9 @@ table#unusual-hotels{
 }
 table#unusual-hotels TH{
 	border: black solid 1px;
+	background-color:grey;
+	width: 100px;
+	height: 50px;
 }
 table#unusual-hotels TD{
 	border: black solid 1px;
