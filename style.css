@@ -14,16 +14,25 @@ header{
 	/*#759CBF гарний blue*/
 }
 header img{
-	width: 50%;
-	height:50%;
+	width: 45%;
+	height:45%;
 	position:relative;
-	left: 25%;
+	left: 28%;
 }
-.Left_img{
-	width: 37%;
-	height:37%;
-	position:relative;
-	right: 5%;
+div{
+	border: 2px solid #ccc;
+	border-radius: 20px;
+	padding: 35px;
+	background-color:rgba(255,255,255,0.8);
+	/*0- повна прозорість, 1-непрозорість,0.5-напівпрозорість*/
+	position: relative;
+}
+span{
+	position: relative;
+	left:10px;
+}
+.imgs{
+	padding: 20px;
 }
 h1,h2{
 	font-family: San-Serif;
@@ -32,8 +41,8 @@ h1,h2{
 }
 p{
 	font-size:100%;
-	margin-bottom: 1em;
-	margin-top: 1em;
+	margin-bottom: 20px;
+	margin-top: 20px;
 	text-align: justify;
 	color: black !important;
 	line-height: 21px;
@@ -48,6 +57,14 @@ p{
 	list-style-type: disc;
 	background-color: #E6E6FA;
 	min-height: 64px;
+}
+.pages{
+	background-color: #f2f2e9;
+	min-height: 64px;
+}
+.page_conteiner{
+	padding: 50px;
+	background-color: #8c7f77;
 }
 table#unusual-hotels{
 	border: black solid 2px;
@@ -104,7 +121,7 @@ table#Americatable{
 	color: black;
 	line-height: 22px;
 	text-align: left;
-	font-weight: normal;  
+	font-weight: normal; 	
 }  
 table#Americatable TH{
 	border: black solid 1px;
@@ -136,16 +153,50 @@ table#Asiatable TD{
 	border: black solid 1px;
 	padding: 10px;	
 }
-.links{
+.links:link{
 	text-decoration: none;
-	color: #655247; 
+	color: #40180A; 
 	font-weight: bold;
 }
-.site_links{
+.links:visited{
 	text-decoration: none;
-	color: #655247; 
+	color: #655247; /*#594832     734E46     40180A*/
+	font-weight: bold;
+}
+.links:hover {
+	text-decoration: none;
+	color: #A63D33; /* #F2CDAC*/
+	font-weight: bold;
+}
+
+.site_links:link{
+	text-decoration: none;
+	color:#593A2E ; /*#655247*/
 	font-weight: bold;
 	font-style: italic;
+}
+.site_links:visited{
+	text-decoration: none;
+	color:#593A2E ; /*#655247*/
+	font-weight: bold;
+	font-style: italic;
+}
+.site_links:hover{
+	text-decoration: none;
+	color: #A63D33; /* #F2CDAC*/
+	font-weight: normal;
+	font-style: italic;
+}
+.site_links:active{
+	text-decoration: none;
+	color: red; /* #F2CDAC*/
+	font-weight: bold;
+	font-style: italic;
+}
+
+/*link="red" vlink="blue" alink="pink"*/
+dt{
+	padding-left:15px;
 }
 dl dt{
 	font-size: 16px;
@@ -162,10 +213,101 @@ dd{
 ul{
 	list-style-type: disc;
 }
+/*
 ul.hotel-list li{
 	background: #ffe5c3;	
-}
+}*/
 ol{
 	list-style-type: decimal;
 	color: black;
+}
+
+.hotel-list {
+list-style: none;
+/*background: #8c7f77; /*EEE3DB*/
+padding: 20px;
+border-radius: 3px;
+}
+.hotel-list li:before {
+  content: "\2605";
+}
+.hotel-list b:first-child{
+	color:#40180A;
+	font-style: italic;
+}
+
+	/* WHITE CONTAINER */
+.ribbonHead {
+  width: 85%;
+  background-color: #fff;
+  padding: 20px 30px 30px 50px;
+  margin: 30px 100px 30px 30px;
+}
+
+/* STYLING H1 ELEMENT */
+.ribbonHead h1 {
+  color: white;
+  position: relative;
+  background-color: #6D6875;
+  margin: 0px -80px 20px -10px;
+  padding: 24px 0px 16px 20px;
+  text-align:left;
+}
+
+.ribbonHead h1:after {
+  content: " ~~~~~~~~~~~";
+}
+.ribbonHead h1:before {
+  content: "\210B ";
+  color: white;
+}
+.floating-button {
+    float: right;
+    background-color: #D7D7E5;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+}
+#back-to-top {
+	position: fixed;
+    bottom: 100px;
+	right:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li:last-child {
+    margin-right: 10px;
+}
+nav ul li a {
+    padding: 20px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
