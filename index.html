@@ -16,8 +16,33 @@
 		.photo {margin-right:30px; }
 		
 		</style>
+	 <script src="script.js"></script> <!-- Підключення зовнішнього скрипту -->
 </head>
 <body bgcolor="#D2BBA0">
+Привіт!
+
+<script>
+<!-- alert("Привіт!");-->
+let text = document.body.firstChild;
+alert (text.data);
+text.remove();
+
+let age = prompt('Скільки тобі повних років?', '');
+if (age >=18){
+alert(`Тобі ${age} років.`);
+let isAdult = confirm("Ти можеш самостійно бронювати номери в готелях.");
+if (isAdult == true){
+alert ("Ласкаво просимо на сторінку!");}
+if (isAdult == false){
+alert("Так,можеш. Ти вже дорослий/а. Ласкаво просимо на сторінку!");}}
+if (age <18){
+alert(`Тобі ${age} років.`);
+let isNOTAdult = confirm("До повноліття ти не зможеш бронювати номери в готелях.");
+if (isNOTAdult == true){
+alert ("Ласкаво просимо на сторінку!");}
+if (isNOTAdult == false){
+alert ("Все одно не зможеш бронювати номери в готелях до повноліття. Ласкаво просимо на сторінку!");}}
+</script>
 <header>
 	<a href="photo_index.html" target="_blank"><img alt="" src="images/1.jpg"></a>
     <h1 align ='center'>Ласкаво просимо до ідеального місця для мандрівників, які шукають найкращі готелі світу!</h1>
@@ -73,10 +98,13 @@
 	</dl>
 	</ol>
 	</dt>
-<br><br>
-
-
-<div style="float:left">&larr;left</div>
-<div style="float:right">right&rarr;</div>
+	<br>
 </body>
+<footer>
+	<p><i>На нашому сайті також можна скористатись такими послугами:</i></p>
+	<button onclick="askUser()">Асистент</button>
+    <button onclick="showDeveloperInfo('Vladyslava', 'Soviak')">Інформація про розробника</button>
+	<button onclick="changeBackground()">Змінити фон сторінки </button>
+	<button onclick="askUser2()">асистент (колбек функція)</button>
+</footer>
 </html> 

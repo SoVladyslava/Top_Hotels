@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Найкращі готелі Америки</title>
+	<script src="script.js"></script>
 </head>
 <header class="page_conteiner">
 <h1 align ='center' id="Start1"><font face ="georgia" size="6" color="black">Найкращі готелі Америки</font></h1>
@@ -19,8 +20,15 @@
 </header>
 <body bgcolor="#D2BBA0"> 
     <h3 align="center">Америка відома своїми розкішними готелями, які пропонують унікальний досвід для туристів.</h3>
-    <ul class="hotel-list">
-        <li><strong><em><span style="background-color:#EBF0F2; border: 3px solid #6d6875; border-radius: 20px; padding: 5px;">Готель "The Four Seasons" у Нью-Йорку, США</span></em></strong></li>
+	<span id="closeInfo"><button onclick="closeIT()">Закрити v</button></span>
+    <div id = "PageContent" style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 0px; padding: 25px;">
+	<p>Переглянути зміст сторінки можна за кпопкою:
+	<button onclick="showPageInfo()">показати зміст сторінки</button>
+	</p></div>
+	<script> PageContent.prepend(closeInfo);</script>
+	<br>
+	<ul class="hotel-list">
+        <li class="hotel-name"><strong><em><span style="background-color:#EBF0F2; border: 3px solid #6d6875; border-radius: 20px; padding: 5px;">Готель "The Four Seasons" у Нью-Йорку, США</span></em></strong></li>
 		<br>
 		<div class="imgs">
 	  <span style="position:relative; left:61px;">
@@ -34,7 +42,7 @@
 	   Завдяки своєму розташуванню, готель є ідеальною базою для огляду визначних пам'яток, таких як Центральний парк, Музей сучасного мистецтва та Бродвей.</p>
 	  </div> <br>
 		
-        <li><strong><em><span style="background-color:#EBF0F2; border: 3px solid #6d6875; border-radius: 20px; padding: 5px;">Готель "The Beverly Hills" у Лос-Анджелесі, США</span></em></strong></li>
+        <li class="hotel-name"><strong><em><span style="background-color:#EBF0F2; border: 3px solid #6d6875; border-radius: 20px; padding: 5px;">Готель "The Beverly Hills" у Лос-Анджелесі, США</span></em></strong></li>
 		<br>
 		<div class="imgs">
 	  <span style="position:relative; left:31px;">
@@ -48,7 +56,7 @@
 	   Завдяки своєму розташуванню в статусному районі Беверлі-Гіллз, гості можуть насолоджуватися шопінгом у елітних бутиках та вивчати околиці.</p>
 		</div><br>
 		
-        <li><strong><em><span style="background-color:#EBF0F2; border: 3px solid #6d6875; border-radius: 20px; padding: 5px;">Готель "The Ritz-Carlton" у Майамі, США</span></em></strong></li>
+        <li class="hotel-name"><strong><em><span style="background-color:#EBF0F2; border: 3px solid #6d6875; border-radius: 20px; padding: 5px;">Готель "The Ritz-Carlton" у Майамі, США</span></em></strong></li>
 		<br>
 		<div class="imgs">
 	  <span style="position:relative; left:31px;">
@@ -62,7 +70,7 @@
 	   Готель є ідеальним місцем для бізнес-подій та особистих свят завдяки своїм елегантним конференц-залам і виходу на пляж.</font></p>
 		</div><br>
 		
-        <li><strong><em><span style="background-color:#EBF0F2; border: 3px solid #6d6875; border-radius: 20px; padding: 5px;">Готель "The Fairmont" у Сан-Франциско, США</span></em></strong></li>
+        <li class="hotel-name"><strong><em><span style="background-color:#EBF0F2; border: 3px solid #6d6875; border-radius: 20px; padding: 5px;">Готель "The Fairmont" у Сан-Франциско, США</span></em></strong></li>
 		<br>
 		<div class="imgs">
 	  <span style="position:relative; left:38px;">
@@ -77,7 +85,7 @@
 	   Готель також пропонує спа-послуги і зручний доступ до основних визначних пам'яток міста.</p>
 		</div><br>
 		
-        <li><strong><em><span style="background-color:#EBF0F2; border: 3px solid #6d6875; border-radius: 20px; padding: 5px;">Готель "The St. Regis" у Вашингтоні, США</span></em></strong></li>
+        <li class="hotel-name"><strong><em><span style="background-color:#EBF0F2; border: 3px solid #6d6875; border-radius: 20px; padding: 5px;">Готель "The St. Regis" у Вашингтоні, США</span></em></strong></li>
 		<br>
 		<div class="imgs">
 	  <span style="position:relative; left:31px;">
@@ -94,7 +102,7 @@
 	<p>Кожен з цих готелів пропонує неперевершене обслуговування та атмосферу розкоші, що робить їх ідеальними для будь-якого типу відпочинку.</p>
 	<br>
 		<table id="Americatable" align="center">
-        <caption><font face="arial" sise="5"><b>Порівняльна таблиця готелів</b></font></caption>
+        <caption><font face="arial" sise="5" class="hotel-name"><b>Порівняльна таблиця готелів</b></font></caption>
         <colgroup>
             <col style="width: 27%;">
 			<col style="width: 20%;">

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
     <title>Найкращі готелі Азії</title>
+	<script src="script.js"></script>
 </head>
 <header class="page_conteiner">
 <h1 align ='center' id="Start1"><font face ="georgia" size="6" color="black">Найкращі готелі Азії</font></h1>
@@ -20,8 +21,15 @@
 <body bgcolor="#D2BBA0">
     <br>
     <h3 align="center">Азія пропонує широкий вибір готелів, які поєднують традиційний стиль з сучасними зручностями.</h3>
-    <ul class="hotel-list">
-        <li><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель "The Peninsula" у Гонконзі</span></em></strong></li>
+	<span id="closeInfo"><button onclick="closeIT()">Закрити v</button></span>
+    <div id = "PageContent" style="background-color:#EBF0F2; border: 3px solid #6d6875; border-radius: 0px; padding: 25px;">
+	<p>Переглянути зміст сторінки можна за кпопкою:
+	<button onclick="showPageInfo()">показати зміст сторінки</button>
+	</p></div>
+	<script> PageContent.prepend(closeInfo);</script>
+	<br>
+	<ul class="hotel-list">
+       <li class="hotel-name"><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель "The Peninsula" у Гонконзі</span></em></strong></li>
 	  <br> 
 	  <div class="imgs">
 	  <span style="position:relative; left:31px;">
@@ -37,7 +45,7 @@
 		</div>
 		<br>
 		
-        <li><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель "Marina Bay Sands" у Сінгапурі</span></em></strong></li>
+        <li class="hotel-name"><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель "Marina Bay Sands" у Сінгапурі</span></em></strong></li>
 	    <br>
 		<div class="imgs">
 		<span style="position:relative; left:31px;">
@@ -51,7 +59,7 @@
 	   використанням розкішних матеріалів, забезпечуючи максимальний комфорт і затишок.</p>
 	  </div> <br>
 	   
-	   <li><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель Atlantis The Palm, Дубай</span></em></strong></li>
+	   <li class="hotel-name"><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель Atlantis The Palm, Дубай</span></em></strong></li>
 	   <br>
 	   <div class="imgs">
 	   <span style="position:relative; left:10px;">
@@ -67,7 +75,7 @@
 	   Гості можуть насолоджуватися розкішними спа-процедурами, заняттями спортом, водними розвагами та екскурсіями.</p>
 		</div><br>
 		
-       <li><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель "The Oberoi" в Удайпурі, Індія</span></em></strong></li>
+       <li class="hotel-name"><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель "The Oberoi" в Удайпурі, Індія</span></em></strong></li>
 	   <br>
 	   <div class="imgs">
 	   <span style="position:relative;">
@@ -81,7 +89,7 @@
 	   Гості можуть насолодитися вишуканими стравами місцевої та міжнародної кухні, а також відвідати спа-салон і тренажерний зал.
 	   Готель також організовує різноманітні екскурсії, включаючи круїзи по озеру та відвідування місцевих визначних пам'яток.</p>
 		</div><br>
-        <li><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель "Mandarin Oriental" у Бангкоку, Таїланд</span></em></strong></li>
+        <li class="hotel-name"><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель "Mandarin Oriental" у Бангкоку, Таїланд</span></em></strong></li>
 	   <br>
 	   <div class="imgs">
 	   <span style="position:relative; left:70px;">
@@ -94,7 +102,7 @@
 	   Готель також славиться своєю бібліотекою, в якій зібрані книги про тайську культуру та історію.</p>
 	  </div> <br>
 	   
-       <li><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель "Shangri-La" у Токіо, Японія</span></em></strong></li>
+       <li class="hotel-name"><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель "Shangri-La" у Токіо, Японія</span></em></strong></li>
 	   <br>
 	   <div class="imgs">
 	   <span style="position:relative; left:17px;">
@@ -108,7 +116,7 @@
 	   Shangri-La також забезпечує легкий доступ до визначних пам'яток Токіо, що робить його ідеальним місцем для відпочинку та бізнесу.</p>	
 	   </div><br>
 	   
-	   <li><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель Burj Al Arab, ОАЕ</span></em></strong></li>
+	   <li class="hotel-name"><strong><em><span style="background-color:#D9C1C3; border: 3px solid #6d6875; border-radius: 20px; padding: 5px; ">Готель Burj Al Arab, ОАЕ</span></em></strong></li>
 	  <br>
 	  <div class="imgs">
 	  <span style="position:relative; left:45px;">
@@ -127,7 +135,7 @@
 	<p><center>Ці готелі славляться своїм високим рівнем обслуговування, розкішними умовами та неповторною атмосферою, роблячи їх ідеальними для туристів та бізнесменів.</center></p>
 	<br>
 	<table id="Asiatable" align="center">
-        <caption ><font face="arial" sise="5"><b>Порівняльна таблиця готелів</b></font></caption>
+        <caption ><font face="arial" sise="5" class="hotel-name"><b>Порівняльна таблиця готелів</b></font></caption>
         <colgroup>
             <col style="width: 27%;">
 			<col style="width: 20%;">
