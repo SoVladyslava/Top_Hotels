@@ -101,7 +101,8 @@
 	
 	<p>Кожен з цих готелів пропонує неперевершене обслуговування та атмосферу розкоші, що робить їх ідеальними для будь-якого типу відпочинку.</p>
 	<br>
-		<table id="Americatable" align="center">
+	
+		<table id="Americatable" align="center" style="display: none;">
         <caption><font face="arial" sise="5" class="hotel-name"><b>Порівняльна таблиця готелів</b></font></caption>
         <colgroup>
             <col style="width: 27%;">
@@ -179,7 +180,11 @@
         </tbody>
     </table>
 	<br>
-	
+	<div class="frame">
+	<p>При наведені курсора на картинку буде відкрито чат з асистентом.</p>
+	<img src="images/assistant.jpg" alt="Assistant" class="assistant-image" id="assistantImage">
+	</div>
+	<br>
 	<p><font size=+1>Дивитись також:</font></p>
     <ul class="links">
         <li><a href="Europe.html#Europetable" class="links">Порівняльна таблиця готелів Європи</a> →</li>   
@@ -188,7 +193,9 @@
     </ul>
 	
 	<p><a href="index.html" class="links" >Перейти на головну сторінку</a></p>
-	
+	<button id="showTable" data-toggle-id="Americatable">Показати порівняльну таблицю готелів</button>
+	<button id ="random-hotel-button">Вибрати випадковий готель</button>
+	<button id="SwitchTheme">Змінити тему сторінки (день/ніч)</button> 
 	
 	<div class="floating-button" id="back-to-top">
 	<a href="#Start1" class="links">&uarr;</a>

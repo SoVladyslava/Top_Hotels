@@ -10,7 +10,7 @@
 </head>
 <header class="page_conteiner">
 <h1 align ='center' id="Start1"><font face ="georgia" size="6" color="black">Найкращі готелі Європи</font></h1>
-	<nav>
+	<nav id="navbar">
 	<ul class="pages">
 	<li type="square"><a href="index.html" class="links">Головна</a></li>
 	<li type="square"><a href="Europe.html" class="links">Найкращі готелі Європи</a></li>
@@ -113,8 +113,12 @@
 
 	<iframe src="frame1.html" name="framename" frameboarder="1" width="625" height="500"></iframe>
 	
-	
-	 <table id="Europetable"  align="center">
+	<div class="frame">
+	<p>При наведені курсора на картинку буде відкрито чат з асистентом.</p>
+	<img src="images/assistant.jpg" alt="Assistant" class="assistant-image" id="assistantImage">
+	</div>
+	<br>
+	 <table id="Europetable" align="center" style="display: none;">
         <colgroup>
             <col style="width: 27%;">
 			<col style="width: 20%;">
@@ -208,8 +212,11 @@
 </body>
 
 	<p><em>На нашому сайті також можна:</em></p>
-	<button onclick="compareHotelPrices()">порівняти ціни в обраних готелях</button>
+	<button id="showTable" data-toggle-id="Europetable">Показати порівняльну таблицю готелів</button>
+	<button onclick="compareHotelPrices()">Порівняти ціни в обраних готелях</button>
+	<button id ="random-hotel-button">Вибрати випадковий готель</button>
     <button onclick="updateContent()">Оновити контент</button>
+	<button id="SwitchTheme">Змінити тему сторінки (день/ніч)</button> 
 	<!-- <div id="new-space"></div> -->
 	<footer>
 	<p><i>Знайшли чи відвідали крутий готель? Розкажіть нам :)</i> </p>

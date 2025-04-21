@@ -134,7 +134,8 @@
     </ul>
 	<p><center>Ці готелі славляться своїм високим рівнем обслуговування, розкішними умовами та неповторною атмосферою, роблячи їх ідеальними для туристів та бізнесменів.</center></p>
 	<br>
-	<table id="Asiatable" align="center">
+	
+	<table id="Asiatable" align="center" style="display: none;">
         <caption ><font face="arial" sise="5" class="hotel-name"><b>Порівняльна таблиця готелів</b></font></caption>
         <colgroup>
             <col style="width: 27%;">
@@ -233,6 +234,11 @@
         </tbody>
     </table>
 	<br>
+	<div class="frame">
+	<p>При наведені курсора на картинку буде відкрито чат з асистентом.</p>
+	<img src="images/assistant.jpg" alt="Assistant" class="assistant-image" id="assistantImage">
+	</div>
+	<br>
 	<p><font size=+1>Дивитись також:</font></p>
     <ul class="links">
         <li><a href="America.html#Americatable" class="links">Порівняльна таблиця готелів Америки</a> →</li>
@@ -240,7 +246,9 @@
 		<li><a href="Unusual_hotels.html" class="links">Незвичні готелі</a> →</li>		
     </ul>
 	<p><a href="index.html" class="links" >Перейти на головну сторінку</a></p>
-	
+	<button id="showTable" data-toggle-id="Asiatable">Показати порівняльну таблицю готелів</button>
+	<button id ="random-hotel-button">Вибрати випадковий готель</button>
+	<button id="SwitchTheme">Змінити тему сторінки (день/ніч)</button> 
 	
 	<div class="floating-button" id="back-to-top">
 	<a href="#Start1" class="links">&uarr;</a>

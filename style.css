@@ -58,6 +58,12 @@ p{
 	background-color: #E6E6FA;
 	min-height: 64px;
 }
+.container:hover{
+	border: 10px solid blavk;
+}
+.underline{
+	text-decoration: underline;
+}
 .pages{
 	background-color: #f2f2e9;
 	min-height: 64px;
@@ -292,4 +298,40 @@ nav ul li a {
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 2px;
+}
+.frame {
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+	width: 30%;
+}
+
+.assistant-image {
+    width: 300px;
+    height: auto;
+    cursor: pointer; /* Змінюємо курсор на вказівник */  
+}
+.highlight {
+	background-color: #e0f7fa;
+}
+#list_index {
+    margin-top: 20px;
+}
+
+#list_index li {
+    cursor: pointer; /* Змінюємо курсор на вказівник */
+    padding: 5px;
+}
+.dark-theme {
+    background-color: #333;
+    color: white;
+}
+#discountMessage {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #28a745;
+    background-color: rgba(40, 167, 69, 0.1);
+    color: #28a745;
 }

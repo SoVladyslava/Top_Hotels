@@ -1,55 +1,4 @@
 //  Функція "Діалог з користувачем"
-function askUser() {
-    let name;
-
-    // Цикл для отримання імені
-    while (true) {
-        name = prompt("Як вас звати?");
-        
-        // Перевірка на пусте значення або пробіли
-        if (name === null) {
-            // Якщо натиснуто "Відмінити", виходимо з функції
-            return;
-        } else if (name.trim() === "") //string.trim() видаляє пробіли з початку і кінця рядка
-			{
-            alert("Не задано ім'я. Спробуйте ще раз.");
-        } else {
-            break; // Виходимо з циклу, якщо ім'я введено коректно
-        }
-    }
-
-    alert(`Привіт, ${name}!`);
-    let isCorrect = confirm(`Ваше ім'я ${name} вірне?`);
-    
-    if (isCorrect) {
-        let consultation = confirm("Вам потрібна консультація? Ок - так, Відмінити - ні.");
-        if (consultation) {
-            let phone;
-
-            // Цикл для отримання номера телефону
-            while (true)
-			{
-                phone = prompt("Введіть ваш номер телефону:");
-                
-                // Перевірка на пусте значення, пробіли або букви
-                if (phone === null) {
-                    // Якщо натиснуто "Відмінити", виходимо з функції
-                    return;
-                } else if (phone.trim() === "" || !/^\d+$/.test(phone)) // / вираз/ - це так задається вираз, ^ -початок вхідних даних(перевірка починається з початку рядка),  \d = [0-9], + це 1 або більше введених символів, $-кінець вхідних даних}
-														// test - метод який порівнює регулярний вираз з вказаною строкою, повертає true or false
-				{
-                    alert("Невірно введений номер. Спробуйте ще раз.");
-                } else {
-                    break; // Виходимо з циклу, якщо номер введено коректно
-                }
-            }
-            alert(`Дякуємо, ${name}. Вам передзвонить асистент.`);
-        } 
-		else {  alert("Добре, якщо потрібна буде інформація - звертайтесь."); }
-    } 
-	else {    alert("Спробуйте ще раз."); }
-}
-
 function ask(question, yes, no) {
     if (confirm(question)) yes();
     else no();
@@ -107,11 +56,6 @@ function askUser2() {
 }
 
 
-// Функція для виводу інформації про розробника
-function showDeveloperInfo(firstName, lastName, position = "Розробник") {
-    alert(`Розробник: ${firstName} ${lastName}, Посада: ${position}`);
-}
-
 // Функція для порівняння двох рядків
 function compareHotelPrices() {
     let hotel1Name = prompt("Введіть назву першого готелю:");
@@ -134,17 +78,6 @@ function compareHotelPrices() {
     }
 }
 
-// Зміна фону сторінки на 30 секунд
-function changeBackground() {
-    document.body.style.backgroundColor = "lightblue"; // Змінюємо фон
-	
-	let textP = document.createTextNode("звичайний фон сторінки буде повернено через 30 секунд");
-	document.body.after(textP);
-
-	setTimeout(() => {
-        document.body.style.backgroundColor = ""; // Повертаємо фон через 30 секунд
-    }, 30000);
-}
 
 // Перенаправлення на іншу сторінку
 function redirect() {
@@ -277,3 +210,77 @@ function CreateForm(){
 }
 
 
+// Рандомний готель
+document.addEventListener("DOMContentLoaded", function() {
+    const button = document.getElementById("random-hotel-button");
+    const hotelList = document.querySelectorAll(".hotel-list li");
+	
+	function Gener(){
+		alert("Генерується випадковий готель...Готово. Натисніть OK.");
+	}
+	function Random_Hotel(){
+		// Генеруємо випадковий індекс
+        const randomIndex = Math.floor(Math.random() * hotelList.length);
+        // Отримуємо назву випадково вибраного готелю
+        const selectedHotel = hotelList[randomIndex].innerText;
+        // Виводимо назву готелю в alert
+        alert(`Випадковий готель: ${selectedHotel}`);
+	}
+	button.addEventListener("click",Gener);
+	button.addEventListener("click",Random_Hotel);
+	/*
+	button.addEventListener("click", function(){
+		alert("Генерується випадковий готель...Готово. Натисніть OK.")
+	})
+    button.addEventListener("click", function() {
+        // Генеруємо випадковий індекс
+        const randomIndex = Math.floor(Math.random() * hotelList.length);
+        // Отримуємо назву випадково вибраного готелю
+        const selectedHotel = hotelList[randomIndex].innerText;
+        // Виводимо назву готелю в alert
+        alert(`Випадковий готель: ${selectedHotel}`);
+    });*/
+});
+
+//Навести на зображення для асистента
+document.addEventListener("DOMContentLoaded", function() {
+// Обробник подій для зображення
+document.getElementById("assistantImage").addEventListener("mouseover",handleMouseEnter);
+});
+
+function handleMouseEnter(event) {
+    const imageElement = event.currentTarget; // Отримуємо елемент, на якому спрацював обробник
+    const confirmation = confirm(event.type + " on " + imageElement +". " + "Зараз відкриється чат з асистентом. Натисніть ОК, щоб продовжити.");
+    
+    if (confirmation) {
+        askUser2(); // Викликаємо функцію для початку чату
+    }
+}
+
+// Показати/сховати таблицю
+document.addEventListener("DOMContentLoaded", function() {
+	// Додаємо обробник подій до кнопки "Показати таблицю"
+	document.getElementById("showTable").addEventListener("click", function(event) {
+		// Отримуємо ідентифікатор таблиці з атрибута
+            let tableId = this.getAttribute("data-toggle-id");
+            const table = document.getElementById(tableId);
+			
+			// Перевіряємо, чи таблиця прихована
+			if (table.style.display === "none") {
+				table.style.display = "table"; // Показуємо таблицю
+                this.textContent = "Сховати таблицю"; // Змінюємо текст кнопки
+            } else {
+				table.style.display = "none"; // Сховуємо таблицю
+                this.textContent = "Показати таблицю"; // Змінюємо текст кнопки назад
+			}
+	});
+});
+
+//Зміна теми
+let isDarkTheme = false;
+document.addEventListener("DOMContentLoaded", function() {
+document.getElementById("SwitchTheme").addEventListener("click", function() {
+    document.body.classList.toggle("dark-theme");
+    isDarkTheme = !isDarkTheme;
+});
+});
