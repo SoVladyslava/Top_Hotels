@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	a.addEventListener("click", function(event) {
 	
     const target = event.target.closest("OL");
-
+	
     // Перевіряємо, чи клікнули на елемент списку
     if (target) {
         target.classList.toggle("highlight"); // Підсвічуємо елемент
@@ -156,14 +156,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 });
 
-
-
-//Тест removeEventListener
-function test(e)
-{alert(e);}
-
-document.addEventListener("click", test);
-document.removeEventListener("click", test);
 
 
 //Зміна теми
@@ -190,7 +182,7 @@ navbar.addEventListener("click", function(event) {
 });
 });
 
-
+/*
 // Знижка від сайту
 document.addEventListener("DOMContentLoaded", function() {
     // Додаємо обробник подій до кнопки "Отримати знижку"
@@ -210,3 +202,68 @@ document.addEventListener("DOMContentLoaded", function() {
 
     getDiscountButton.addEventListener("click", handleClick);
 });
+*/
+
+//Підсвітка цікавих фактів 
+document.addEventListener("DOMContentLoaded", function() {
+// Додаємо обробники подій для списку фактів
+const factList = document.getElementById("fact-list");
+
+factList.addEventListener("mouseover", function(event) {
+    const target = event.target;
+    if (target.tagName === "LI" && event.relatedTarget) {
+        target.style.backgroundColor = "#e0f7fa"; // Підсвічування
+        target.style.color = "#007BFF"; // Зміна кольору тексту
+    }
+});
+
+factList.addEventListener("mouseout", function(event) {
+    const target = event.target;
+    if (target.tagName === "LI") {
+        target.style.backgroundColor = ""; // Прибираємо підсвічування
+        target.style.color = ""; // Повертаємо колір тексту
+    }
+});
+});
+
+/*
+document.addEventListener("DOMContentLoaded", function() {
+// Перетягування елемента
+const puzzlePiece = document.getElementById("puzzle-piece");
+
+puzzlePiece.addEventListener("mousedown", function(event) {
+    const offsetX = event.clientX - puzzlePiece.getBoundingClientRect().left;
+    const offsetY = event.clientY - puzzlePiece.getBoundingClientRect().top;
+
+    function mouseMoveHandler(e) {
+        puzzlePiece.style.position = "absolute";
+        puzzlePiece.style.left = (e.clientX - offsetX) + "px";
+        puzzlePiece.style.top = (e.clientY - offsetY) + "px";
+    }
+
+    function mouseUpHandler() {
+        // Перевірка, чи елемент знаходиться в зоні скидки
+        const puzzleArea = document.getElementById("puzzle-area");
+        const areaRect = puzzleArea.getBoundingClientRect();
+        const pieceRect = puzzlePiece.getBoundingClientRect();
+
+        if (
+            pieceRect.left >= areaRect.left &&
+            pieceRect.right <= areaRect.right &&
+            pieceRect.top >= areaRect.top &&
+            pieceRect.bottom <= areaRect.bottom
+        ) {
+            document.getElementById("discount-message").style.display = "block"; // Показуємо повідомлення
+        }
+
+        // Видаляємо обробники подій
+        document.removeEventListener("mousemove", mouseMoveHandler);
+        document.removeEventListener("mouseup", mouseUpHandler);
+    }
+
+    document.addEventListener("mousemove", mouseMoveHandler);
+    document.addEventListener("mouseup", mouseUpHandler);
+});
+
+});
+*/

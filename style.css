@@ -335,3 +335,61 @@ nav ul li a {
     background-color: rgba(40, 167, 69, 0.1);
     color: #28a745;
 }
+#fact-list {
+    list-style-type: none;
+    padding: 0;
+}
+#fact-list li {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s; /* Плавний перехід */
+}
+
+#fact-list li:hover {
+    background-color: #e0f7fa; /* Підсвічування при наведенні */
+    color: #007BFF; /* Зміна кольору тексту */
+}
+#word-bank {
+padding: 10px;
+border: 2px dashed #007acc;
+min-height: 100px;
+margin-bottom: 20px;
+background: #e6f2ff;
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+.word {
+background: #007acc;
+color: white;
+padding: 8px 12px;
+border-radius: 6px; 
+cursor: grab;
+user-select: none;
+position: relative;
+}
+#sentence-area {
+padding: 10px;
+border: 2px solid #004a99;
+min-height: 60px;
+background: white;
+font-size: 1.2em;
+line-height: 1.4em;
+color: #004a99;
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+align-items: center;
+}
+#sentence-area .word {
+background: #3399ff;
+cursor: default;
+}
+#discount-msg {
+margin-top: 20px;
+font-weight: bold;
+font-size: 1.3em;
+color: green;
+text-align: center;
+}
